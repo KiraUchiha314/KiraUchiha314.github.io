@@ -1,10 +1,11 @@
 /* ===== VARIABLES ===== */
 :root {
-  --celeste: #64bbd6;
-  --celeste-light: #a8d8ea;
-  --beige: #ffe7c5;
-  --verde: #97c54e;
-  --verde-dark: #5a8a1e;
+  /* Paleta actualizada: tonos celeste/turquesa y blanco */
+  --celeste: #9ad3e1;       /* header / hero background */
+  --celeste-light: #dff7fb; /* tarjetas y acentos claros */
+  --beige: #ffffff;         /* fondo general (blanco) */
+  --verde: #66c1d9;        /* acento principal (turquesa) */
+  --verde-dark: #2f9fb0;   /* acento oscuro para títulos */
   --verde-bg: #7ab83a;
   --white: #ffffff;
   --dark: #1a1a2e;
@@ -23,7 +24,7 @@ body {
 
 /* ===== NAVBAR ===== */
 .navbar {
-  background: var(--beige);
+  background: var(--celeste);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,7 +71,7 @@ body {
 
 /* ===== HERO ===== */
 .hero-section {
-  background: var(--celeste);
+  background: var(--white);
   padding: 40px 20px 50px;
   text-align: center;
 }
@@ -85,12 +86,12 @@ body {
 .hero-title {
   font-size: 2.2rem;
   font-weight: 800;
-  color: white;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  color: var(--verde);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.06);
 }
 
 .hero-sub {
-  color: white;
+  color: var(--verde);
   margin-top: 8px;
   font-size: 1.05rem;
 }
@@ -102,13 +103,14 @@ body {
 }
 
 .hero-image-card {
-  background: white;
+  background: var(--verde);
   padding: 12px;
   border-radius: 14px;
-  box-shadow: 0 14px 36px rgba(16, 66, 86, 0.18);
+  box-shadow: 0 14px 36px rgba(16, 66, 86, 0.12);
   position: relative;
   width: min(760px, 92%);
   max-width: 820px;
+  border: 8px solid var(--verde);
 }
 
 
@@ -127,24 +129,29 @@ body {
 
 /* ===== AVES SECTION ===== */
 .aves-section {
-  background: var(--beige);
+  background: var(--celeste);
   padding: 50px 40px;
   text-align: center;
+}
+
+.aves-section .section-title,
+.aves-section .section-sub {
+  color: var(--white);
 }
 
 .section-title {
   font-size: 2rem;
   font-weight: 800;
-  color: green;
+  color: var(--verde-dark);
   margin-bottom: 6px;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.06);
 }
 
 .section-sub {
-  color: green;
+  color: var(--verde);
   font-size: 1rem;
   margin-bottom: 32px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.02);
 }
 
 .aves-grid {
@@ -160,8 +167,8 @@ body {
   border-radius: 16px;
   padding: 20px;
   text-align: center;
-  border: 1.5px solid #e0e0e0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 2px solid #23934f;
+  box-shadow: 0 2px 8px rgba(23, 105, 58, 0.14);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .ave-card:hover { transform: translateY(-4px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
@@ -181,15 +188,16 @@ body {
 .ave-card p  { font-size: 0.85rem; color: var(--gray-text); margin-bottom: 12px; line-height: 1.5; }
 
 .sabias-box {
-  background: var(--beige);
-  border-left: 3px solid var(--verde);
+  background: #f4f6b3;
+  border: 1px solid #bfd267;
+  border-left: 3px solid #23934f;
   border-radius: 6px;
   padding: 8px 10px;
   font-size: 0.78rem;
   color: var(--gray-text);
   line-height: 1.5;
 }
-.sabias-label { font-weight: 700; }
+.sabias-label { color: #23934f; font-weight: 700; }
 
 /* ===== DATOS CURIOSOS ===== */
 .datos-section {
@@ -261,13 +269,13 @@ body {
 .video-header h2{
     font-size:48px;
     margin-bottom:10px;
-    color:#111827;
+    color:#66c1d9;
 }
 
 .video-header p{
     font-size:18px;
     line-height:1.8;
-    color:#6b7280;
+    color:#66c1d9;
 }
 .video-container{
     display:flex;
@@ -485,7 +493,7 @@ body {
 
 /* ===== CONTACTO ===== */
 .contacto-section {
-  background-color: var(--verde-bg);
+  background-color: var(--celeste);
   background-image: url('../Assets/Img/Fondo aves web.png'), url('../Assets/Img/Fondo aves web.png');
   background-repeat: no-repeat, no-repeat;
   background-position: left bottom, right bottom;
@@ -507,7 +515,7 @@ body {
 .contacto-title {
   font-size: 2.4rem;
   font-weight: 800;
-  color: #7b3f8a;
+  color: var(--white);
 }
 
 .contacto-grid {
@@ -540,10 +548,10 @@ body {
   background-color: #444;
 }
 
-.contacto-card h3 { font-size: 1rem; font-weight: 800; margin-bottom: 6px; }
-.contact-role  { font-size: 0.9rem; font-weight: 700; margin-bottom: 10px; }
+.contacto-card h3 { color: var(--verde); font-size: 1rem; font-weight: 800; margin-bottom: 6px; }
+.contact-role  { color: var(--verde); font-size: 0.9rem; font-weight: 700; margin-bottom: 10px; }
 .contact-email { font-size: 0.85rem; color: var(--gray-text); }
-.contact-email.link { color: var(--celeste); text-decoration: underline; }
+.contact-email.link { color: var(--verde); text-decoration: underline; }
 
 .contacto-birds-bottom {
   display: flex;
@@ -817,7 +825,7 @@ body {
 
 /* ===== CONECTA ===== */
 .conecta-section {
-  background: var(--verde-bg);
+  background: #9ad3e1;
   min-height: calc(100vh - 120px);
   padding: 40px 40px;
   text-align: center;
@@ -828,8 +836,8 @@ body {
 
 .aciertos-badge {
   display: inline-block;
-  background: var(--verde);
-  color: white;
+  background: #dcfce7;
+  color: #16a34a;
   font-weight: 700;
   padding: 6px 22px;
   border-radius: 20px;
